@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;  
+    font-family: 'Roboto';
+}
+
+.title {
+    font-size: 1.8vw;
+    color: white;
+
+    text-align: center;
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 10%;
+
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+}
+
+@keyframes appear {
+    0% {opacity: 0; animation-timing-function: ease-in-out;}
+    50% {opacity: .5; animation-timing-function: ease-in-out;}
+    100% {opacity: 1; animation-timing-function: ease-in-out;}
+}
+
+.navigation {
+    display: block;
+
+    position: absolute;
+
+    top: 40%;
+    transform: translate(0 -50%);
+
+    height: 100%;
+
+    align-content: space-between;
+
+    animation-name: reveal;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+
+}
+
+@keyframes reveal {
+    0% {left: -20%;}
+    100% {left: 0%;}
+}
+
+button {
+    font-size: 2.5vh;
+    color: white;
+
+    background-color: #121212;
+
+    outline: none;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: aliceblue;
+    border-left-color: #121212;
+    border-radius: 0px 25px 25px 0px;
+
+    margin: 1vh 1vh 1vh 0;
+
+    width: 25vh;
+
+    text-align: center;
+
+    padding: 1vh;
+
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+
+    box-shadow: 5px 5px 5px 5px rgba(81, 0, 122, .25);
+}
+
+button:hover {
+    background-color: white;
+    color: #121212;
+    border-color: grey;
+
+    box-shadow: 5px 5px 5px 5px rgba(81, 0, 122, 1);
+}
+
+.text-container {
+    position: absolute;
+
+    top: 40%;
+    left: 30%;
+    transform: translate(-50% -50%);
+
+    width: 50%;
+
+    justify-content: center;
+    justify-content: space-between;
+
+    align-content: space-between;
+
+    display: block;
+
+    /* border-style: solid;
+    border-width: 2px;
+    border-color: aliceblue;
+    border-radius: 25px; */
+
+}
+
+.text {
+    font-family: 'Roboto';
+    font-size: 1.25vw;
+    color: white;
+
+    text-align: center;
+
+    display: block;
+
+    float: left;
+
+    margin: 1vw;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: aliceblue;
+    border-radius: 25px;
+
+    padding: 5px;
+
+    width: 300px;
+
+    height: fit-content;
+}
+
+@media (max-width: 1200px) {
+    .text {
+        font-size: 1.8vh;
+    }
+
+    .title {
+        font-size: 2.75vh;
+    }
+
+    button {
+        font-size: 1.5vh;
+        width: 15vh;
+        padding: .5vh;
+    }
+
+    .text-container {
+        top: 30%;
+    }
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 2.5vh;
+    }
+}
